@@ -28,7 +28,7 @@ module HealthGraph
     end
 
     def activity(uri, params = {})
-      HealthGraph::FitnessActivity.new self.access_token, self.uri, params
+      HealthGraph::FitnessActivity.new self.access_token, uri, params
     end
     
     def fitness_activities params = {}
