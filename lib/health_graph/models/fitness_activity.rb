@@ -2,17 +2,17 @@ module HealthGraph
   class FitnessActivity
     include Model
     
-    hash_attr_accessor :uri, :type, :start_time, :total_distance, :distance, :duration, :heart_rate, :calories, :total_climb, :source
+    hash_attr_accessor :uri, :type, :start_time, :total_distance, :distance, :duration, :heart_rate, :calories, :total_climb, :source, :path
     
-    # class Path
-    #   include Model      
+    class Path
+      include Model      
       
-    #   # hash_attr_accessor :type, :start_time, :total_distance, :duration, :uri
+      hash_attr_accessor :timestamp, :altitude, :longitude, :latitude, :type
       
-    #   def initialize(hash) 
-    #     populate_from_hash! hash
-    #   end
-    # end
+      def initialize(hash) 
+        populate_from_hash! hash
+      end
+    end
                       
     def initialize(access_token, path, params = {})
       self.access_token = access_token
