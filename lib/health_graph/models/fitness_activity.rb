@@ -14,7 +14,7 @@ module HealthGraph
     #   end
     # end
                       
-    def initialize(access_token, path, params = {})            
+    def initialize(access_token, path, params = {})
       self.access_token = access_token
       response = get path, HealthGraph.accept_headers[:fitness_activity], params
       self.body = response.body
