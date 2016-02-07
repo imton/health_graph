@@ -2,7 +2,7 @@ module HealthGraph
   class FitnessActivity
     include Model
     
-    hash_attr_accessor :uri, :userID, :type, :start_time, :total_distance, :distance, :duration, :heart_rate, :calories, :total_climb, :path, :source, 
+    hash_attr_accessor :uri, :type, :start_time, :total_distance, :distance, :duration, :heart_rate, :calories, :total_climb, :source
     
     # class Path
     #   include Model      
